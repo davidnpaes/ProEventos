@@ -1,9 +1,15 @@
 <app-navbar></app-navbar>
 
 <div class="container">
-  <app-eventos></app-eventos>
-
 
   <router-outlet></router-outlet>
 
 </div>
+
+<ngx-spinner
+  size="medium"
+  color="#FFF"
+  type="ball-pulse"
+>
+  <p style="font-size: 20px; color: white">Carregando...</p>
+</ngx-spinner>
