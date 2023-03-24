@@ -13,5 +13,9 @@ export class TituloComponent implements OnInit {
   }
 
   @Input() titulo : string | undefined;
+  @Input() subtitulo : string | undefined;
+  @Input() iconeClass : string | undefined;
+  @Input() mostrarListar : boolean = false;
+
 
 }

@@ -1,14 +1,14 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm" *ngIf="MostrarNav()">
   <div class="container container-fluid">
-    <a class="navbar-brand" href="#">Proeventos</a>
+    <a class="navbar-brand active" href="#">Proeventos</a>
     <button class="navbar-toggler" (click)="isCollapsed = !isCollapsed"
     [attr.aria-expanded]="!isCollapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav" [collapse]="isCollapsed" [isAnimated]="true">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link"  routerLinkActive="active-link" aria-current="page" routerLink="eventos">Eventos</a>
+          <a class="nav-link"  routerLinkActive="active-link" aria-current="page" routerLink="/eventos/lista">Eventos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLinkActive="active-link" routerLink="palestrantes">Palestrantes</a>
@@ -20,14 +20,14 @@
         <li class="nav-item dropdown" dropdown>
           <a dropdownToggle class="nav-link dropdown-toggle" style="cursor: pointer;" id="navbarDropdownMenuLink" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
-            User
+            David
           </a>
           <div *dropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" routerLink="perfil">
+            <a class="dropdown-item" routerLink="usuario/perfil">
               Perfil
             </a>
             <div role="separator" class="divider"></div>
-            <a class="dropdown-item" href="#">
+            <a class="dropdown-item" routerLink="usuario/login">
               Sair
             </a>
           </div>

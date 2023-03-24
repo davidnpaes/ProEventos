@@ -1,2 +1,12 @@
-<h2>{{titulo}}</h2>
-<hr>
+<div class="d-flex align-items-center p-4 my-4 text-white bg-primary rounded">
+  <div class="d-flex mr-auto align-items-center">
+    <i class="fa {{iconeClass}} fa-2x"></i>
+    <div class="ml-2 lh-1">
+      <h2 class="mb-0">{{titulo}}</h2>
+      <small>{{subtitulo}}</small>
+    </div>
+  </div>
+  <div *ngIf="mostrarListar">
+    <button class="btn btn-outline-light" routerLink="lista">Listar {{titulo}}</button>
+  </div>
+</div>

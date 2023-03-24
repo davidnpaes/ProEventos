@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -9,9 +10,14 @@ export class NavbarComponent implements OnInit {
 
   isCollapsed = true;
 
-  constructor() { }
+  constructor(public router: Router) { }
 
   ngOnInit() {
   }
+
+  MostrarNav() : boolean{
+    return this.router.url != '/usuario/login' && this.router.url != '/usuario/cadastro'
+  }
+
 
 }

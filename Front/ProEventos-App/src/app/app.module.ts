@@ -17,13 +17,19 @@ import { AppComponent } from './app.component';
 import { EventosComponent } from './components/eventos/eventos.component';
 import { PalestrantesComponent } from './components/palestrantes/palestrantes.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
-import { PerfilComponent } from './components/perfil/perfil.component';
+import { PerfilComponent } from './components/usuario/perfil/perfil.component';
 import { TituloComponent } from './shared/titulo/titulo.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ContatosComponent } from './components/contatos/contatos.component';
 
 import { DateTimeFormatPipe } from './util/dateTimeFormat.pipe';
 import { EventoService } from './services/evento.service';
+import { EventosListaComponent } from './components/eventos/eventos-lista/eventos-lista.component';
+import { EventosDetalhesComponent } from './components/eventos/eventos-detalhes/eventos-detalhes.component';
+import { UsuarioComponent } from './components/usuario/usuario.component';
+import { LoginComponent } from './components/usuario/login/login.component';
+import { CadastroComponent } from './components/usuario/cadastro/cadastro.component';
+
 
 @NgModule({
   declarations: [
@@ -35,7 +41,12 @@ import { EventoService } from './services/evento.service';
     DashboardComponent,
     ContatosComponent,
     PerfilComponent,
-    DateTimeFormatPipe
+    EventosListaComponent,
+    EventosDetalhesComponent,
+    DateTimeFormatPipe,
+    UsuarioComponent,
+    LoginComponent,
+    CadastroComponent
    ],
   imports: [
     BrowserModule,
